@@ -1,0 +1,60 @@
+ * Name      : David Andres Sanchez Umbarila
+ * Student ID: 140273228
+ * Email     : dasanchez-umbarila@myseneca.ca
+ * Date      : 02/10/2023
+ 
+- Question 1
+function isValidRoomNumber(room) {
+    return /^[ABCDEFGHIK][0-9]{4}[A-Z]?$/g.test(room);
+}
+
+- Question 2
+function fixSenecaEmail(email) {
+    email = email.trim().split('@');
+    email[1] = email[1].toLowerCase();
+    return email.join('@');
+}
+
+- Question 3
+function fixSenecaEmails(...emails) {
+    return emails.map(fixSenecaEmail);
+}
+
+function fixSenecaEmails(...emails) {
+
+    for (let i = 0; i < emails.length; i++) {
+        emails[i] = fixSenecaEmail(emails[i]);
+    }
+    return emails;
+}
+
+- Question 4
+class Weight {
+    constructor(grams = 1.0){
+        this.grams = grams;
+    }
+
+    kilograms(formatted) {
+        if (formatted) return `~${this.grams / 1000} kg`;
+        return this.grams / 1000;
+    }
+
+    pounds(formatted) {
+        if (formatted) return `~${this.kilograms() * 2.20462} lbs`;
+        return this.kilograms() * 2.20462;
+    }
+}
+
+- Question 5
+function createEmployee(name, age, department, position, salary) {...}
+
+Using an object as the argument for this function would not only make 
+it more readable but I would allow fewer mistakes since trusting 
+position based arguments would lead to simple problem where the 
+arguments are in a different order than they are supposed to be. 
+Additionally this solution allows for flexibility a scalability is 
+for any reason we wanted to add more arguments to read or modify we 
+would only need to modify the object and not the function sentence. 
+In summary, using an object allows the programmer to have a more 
+flexible and readable set of arguments and reduces the amounts of 
+mistakes made by function callers.
