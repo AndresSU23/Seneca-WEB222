@@ -1,0 +1,180 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  overflow: auto;
+  font-family: 'Lato', sans-serif;
+  background-image: url('/images/tunnel-wallpaper-blur.webp');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Caveat', sans-serif;
+}
+#header-background {
+  width: 100%;
+  height: 3rem;
+  background-color: transparent;
+  text-align: center;
+}
+
+section {
+  padding-inline: 5%;
+}
+article {
+  background-color: #1c2331;
+  border-radius: 3%;
+  border-style: dashed;
+  border-color: aliceblue;
+  border-width: 2%;
+  padding-inline: 4%;
+  padding-bottom: 1%;
+  margin-bottom: 4%;
+}
+
+#extra-info {
+  background-color: #242d3e;
+  border-radius: 3%;
+  border-style: dashed;
+  border-color: aliceblue;
+  border-width: 2%;
+}
+
+nav {
+  padding-top: 1.5%;
+  font-size: large;
+}
+nav a {
+  padding-inline: 2%;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 10%;
+}
+.mySlides {
+  display: none;
+}
+
+#left-menu {
+  inherits: none;
+  width: 15%;
+  float: left;
+  border-style: none;
+  background-color: #1c2331;
+  border-radius: 3%;
+  border-style: dashed;
+  border-color: aliceblue;
+  border-width: 2%;
+  padding-left: 2%;
+}
+
+#left-menu li {
+  padding-bottom: 5%;
+  font-size: medium;
+  font-variant-ligatures: common-ligatures;
+}
+
+p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  all: unset;
+}
+aside p {
+  padding-left: 15%;
+  font-size: 85%;
+  text-indent: -2em;
+}
+.home-content {
+  padding-inline: 4%;
+}
+
+section {
+  width: 60%;
+  float: left;
+  padding-right: 1%;
+}
+aside {
+  width: 25%;
+  float: right;
+}
+aside img {
+  padding-top: 0;
+  padding-left: 13%;
+}
+#plot-image {
+  float: left;
+  width: 25%;
+  height: 10%;
+  padding-right: 2%;
+}
+#plot-figure {
+  padding: 0%;
+  border: 0;
+  margin: 0%;
+}
+figcaption {
+  font-size: 80%;
+  text-align: center;
+  padding: 0%;
+}
+#plot-figure img {
+  padding: 0%;
+  height: 100%;
+  width: 100%;
+}
+#production-figure {
+  padding: 0%;
+  border: 0;
+  margin: 0%;
+  float: right;
+  width: 50%;
+  height: 30%;
+  padding-left: 2%;
+}
+#production-figure img {
+  padding: 0%;
+  height: 100%;
+  width: 100%;
+}
+blockquote {
+  margin: 0;
+  margin-bottom: 1%;
+}
+
+blockquote p {
+  background: #eee;
+  border-radius: 5px;
+  padding: 2%;
+}
+
+#references {
+  float: left;
+  max-width: 30%;
+  text-align: justify;
+}
+#honesty {
+  float: right;
+  max-width: 40%;
+  text-align: justify;
+  padding-right: 10%;
+  padding-top: 5%;
+}
