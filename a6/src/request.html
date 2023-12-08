@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+
+    <!-- Change this to your name-->
+    <meta name="author" content="David Andres Sanchez Umbarila" />
+
+    <title>WEB222 Music Request</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="stylesheet" href="./css/water.css" />
+    <link rel="stylesheet" href="./css/request.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="top-nav">
+        <a href="index.html">Home</a>
+        <a href="subscription.html">Subscription</a>
+        <a href="request.html" class="active">Request</a>
+      </nav>
+      <!-- Change this to your App's info -->
+      <h1>Timeless Sounds of Spanish Pop Rock</h1>
+      <p>
+        Explore the Heartbeat of Spanish Pop Rock Through its Unforgettable Tunes with Numerous
+        actors across time
+      </p>
+    </header>
+    <main>
+      <p id="form-title">
+        Have any Artist you want to see in Timeless Sounds?<br /><span
+          class="material-symbols-outlined"
+        >
+          expand_more
+        </span>
+      </p>
+
+      <form id="artistForm" action="https://httpbin.org/post" method="post" target="_blank">
+        <div class="form-container">
+          <div class="info-input">
+            <label for="artistName">Artist's Name:</label>
+            <input type="text" id="artistName" name="artistName" required />
+          </div>
+
+          <div class="info-input">
+            <label for="musicGenre">Music Genre:</label>
+            <select id="musicGenre" name="musicGenre" required readonly>
+              <option value="Reggae">Reggae</option>
+              <option value="reggaeton">Reggaeton</option>
+              <option value="latinpop">Latin Pop</option>
+              <option value="rock">Rock</option>
+              <option value="vallenato">Vallenato</option>
+              <option value="tropical">Tropical</option>
+              <option value="salsa">Salsa</option>
+              <option value="bachata">Bachata</option>
+              <option value="banda">Banda</option>
+              <option value="merengue">Merengue</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="explicit-input">
+          <label for="explicitLyrics">Does They have Explicit lyrics?</label>
+          <input type="checkbox" id="explicitLyrics" name="explicitLyrics" />
+        </div>
+
+        <div class="url-form">
+          <container>
+            <label for="socialMedia">Social Media URLs:</label>
+            <button type="button" onclick="addSocialMediaInput()">Add Another URL</button>
+          </container>
+          <div id="socialMediaInputs">
+            <input type="text" name="socialMedia[]" placeholder="Enter a URL" required />
+          </div>
+        </div>
+        <div class="url-form">
+          <container>
+            <label for="songsAndVideos">Songs and Videos URLs:</label>
+            <button type="button" onclick="addSongsAndVideosInput()">Add Another URL</button>
+          </container>
+          <div id="songsAndVideosInputs">
+            <input type="text" name="songsAndVideos[]" placeholder="Enter a URL" required />
+          </div>
+        </div>
+
+        <label for="artistDescription">Why should we Include this Artist?</label>
+        <textarea id="artistDescription" name="artistDescription" rows="4" required></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
+    <script>
+      function addSocialMediaInput() {
+        const socialMediaInputs = document.getElementById("socialMediaInputs");
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.name = "socialMedia[]";
+        newInput.placeholder = "Enter a URL";
+        newInput.required = true;
+        socialMediaInputs.appendChild(newInput);
+      }
+
+      function addSongsAndVideosInput() {
+        const songsAndVideosInputs = document.getElementById("songsAndVideosInputs");
+        const newInput = document.createElement("input");
+        newInput.type = "text";
+        newInput.name = "songsAndVideos[]";
+        newInput.placeholder = "Enter a URL";
+        newInput.required = true;
+        songsAndVideosInputs.appendChild(newInput);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=500, initial-scale=1" />
+
+    <!-- Change this to your name-->
+    <meta name="author" content="David Andres Sanchez Umbarila" />
+
+    <title>WEB222 Music Subscription</title>
+    <!-- Classless CSS Stylesheet - https://watercss.kognise.dev/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?&family=Inconsolata:wght@300&family=Libre+Baskerville&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/water.css" />
+    <link rel="stylesheet" href="./css/subscription.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="top-nav">
+        <a href="index.html">Home</a>
+        <a href="subscription.html" class="active">Subscription</a>
+        <a href="request.html">Request</a>
+      </nav>
+      <!-- Change this to your App's info -->
+      <h1>Timeless Sounds of Spanish Pop Rock</h1>
+      <p>
+        Explore the Heartbeat of Spanish Pop Rock Through its Unforgettable Tunes with Numerous
+        actors across time
+      </p>
+    </header>
+    <main>
+      <div class="newsletter-form">
+        <h2>Join Timeless Sounds Insider</h2>
+        <p>
+          🎸 Dive into the latest Spanish hits with 'Timeless Sounds Insider'! Subscribe now for
+          exclusive updates on your favorite Pop Rock artists. Stay in the loop and let the timeless
+          rhythms unfold! 🌟🎶
+        </p>
+        <form action="https://httpbin.org/post" method="post" target="_blank">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="janedoe123@gmail.com"
+            onfocus="clearDefault()"
+            onblur="restoreDefault()"
+            required
+          />
+          <span id="endline-form">
+            <h4>Ready to feel the Hispanic Beat?</h4>
+            <button type="submit">Subscribe</button>
+          </span>
+        </form>
+      </div>
+    </main>
+    <script>
+      function clearDefault() {
+        var input = document.getElementById("email");
+        if (input.value === "janedoe123@gmail.com") {
+          input.value = "";
+        }
+      }
+
+      function restoreDefault() {
+        var input = document.getElementById("email");
+        if (input.value === "") {
+          input.value = "janedoe123@gmail.com";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Andres Sanchez Umbarila">
+    <title>Test 6 - Looking for Something</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet" href="/index.d356571a.css">
+</head>
+<body>
+    <main>
+        <h1>Looking for Something?</h1>
+        
+        <h2>Fill the form below and we'll help you find the resource</h2>
+
+        <form action="`/search-api" method="POST">
+            <div class="input-block" id="email-block">
+                <label for="email">
+                    <span class="material-symbols-outlined">chevron_right</span> 
+                    <b>Username: </b>
+                </label>
+                <input type="email" id="email" name="email" placeholder="  janedoe123@gmail.com" target="_blank" required="">
+            </div>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+            <h4>Search Filters</h4>
+
+            <div class="input-block" id="search-block">
+                <div id="query-block">
+                    <label for="querySearch">Search Terms: </label>
+                    <input type="search" id="querySearch" name="query-search" required="">
+                </div>
+            
+
+                <div class="input-block" id="resource-block">
+                    <label for="resourceType">Resource Type: </label>
+                    <select name="resourceType" id="resourceType">
+                        <option value="unespecified"> - </option>
+                        <option value="book">Book</option>
+                        <option value="ebook">Ebook</option>
+                        <option value="video">Video</option>
+                    </select>
+
+                    <label for="available" id="available-label">Is it Available? </label>
+                    <input type="checkbox" name="available" id="available">
+                </div>
+            </div>
+
+            <button type="submit" class="button-28">Search</button>
+        </form>
+    </main>
+<script src="/t6.3a1540a7.js"></script></body>
+</html>
